@@ -7,6 +7,20 @@ public class Package {
 	double weightKg;
 	boolean isDelivered;
 	
+	public Package(String trackingNumber, String destination, double weightKg) {
+		this.trackingNumber = trackingNumber;
+		this.destination = destination;
+		this.weightKg = weightKg;
+		this.isDelivered = false;
+	}
+	
+	public Package(String trackingNumber, String destination) {
+		this.trackingNumber = trackingNumber;
+		this.destination = destination;
+		this.weightKg = 1.0;
+		this.isDelivered = false;
+	}
+	
 	public void markAsDelivered() {
 		isDelivered = true;
 		System.out.println("Package " + trackingNumber + " has been delivered!");
